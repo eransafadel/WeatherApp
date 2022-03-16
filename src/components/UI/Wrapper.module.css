@@ -1,0 +1,59 @@
+.header {
+  flex: 4;
+  font-weight: 200;
+  font-size: x-large;
+}
+
+.inputBody {
+  font-weight: 200;
+  flex: 6;
+}
+
+.myFooter {
+  flex: 2;
+  font-weight: 200;
+}
+
+.start {
+  flex: 1;
+}
+
+.headerWeather{
+    flex: 1;
+    font-weight: 200;
+    text-align: center;
+    margin:0px;
+   
+}
+
+.headerWeatherTitle{
+   
+    font-weight: 500;
+    font-size: x-large;
+    margin:0px;
+}
+
+.temp{
+    flex: 3;
+    font-weight: 700;
+ 
+}
+
+.deatils{
+    flex: 2;
+    font-weight: 400;
+}
+
+
+.infoWeatherItem{
+    flex: 2;
+    flex-direction: column;
+}
+
+
+.infoWeatherForecast{
+    flex: 2;
+}
+
+
+

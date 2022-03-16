@@ -1,0 +1,25 @@
+.weather {
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    margin: 0;
+}
+
+.title{
+    font-weight:bold;
+}
+
+.subTitle{
+    display: flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    font-weight:100;
+}
+.titleHuge{
+    font-weight:bold;
+    font-size:xx-large;
+}
