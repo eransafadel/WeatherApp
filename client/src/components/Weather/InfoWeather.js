@@ -9,7 +9,7 @@ const InfoWeather = (props) => {
   const currHour = props.currHour;
   const dataCurrent = props.data.current;
   const dataForecast = props.data.forecast.forecastday[0].hour;
-
+    
   const hoursTemperatureArr = Array.from({ length: 5 }, (_, index) => {
     const hour = currHour - (3 - index);
     return {
@@ -20,7 +20,7 @@ const InfoWeather = (props) => {
     };
   });
 
-  console.log(hoursTemperatureArr);
+ 
 
   const arr = [
     {
@@ -33,14 +33,14 @@ const InfoWeather = (props) => {
     },
     {
       title: "wind",
-      content: `${dataCurrent.wind_kph} km/h%`,
+      content: `${dataCurrent.wind_kph} km/h`,
     },
   ];
 
   return (
     <div className={classes.infoWeather}>
-      <TableWeather data={arr}/>
-      <TableWeather data={hoursTemperatureArr}/>
+      <TableWeather data={arr}/> 
+       <TableWeather data={hoursTemperatureArr}/>
     </div>
   );
 };

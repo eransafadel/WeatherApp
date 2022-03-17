@@ -89,55 +89,45 @@
   padding-top: 20px;
 } */
 
-
 .container {
   display: flex;
   flex-direction: row;
- 
 }
-.details{
+.details {
   display: flex;
   flex-direction: column;
-  margin-left:5%;
+  margin-left: 5%;
   margin-right: 5%;
   width: 40%;
   height: 100vh;
-  left:0;
+  left: 0;
   justify-content: center;
   font-family: "Readex Pro";
 }
 
-.start{
+.start {
   flex: 1;
-
 }
 
-.header{
+.header {
   flex: 3;
   font-weight: 200;
   font-size: x-large;
 }
 
-.inputBody{
+.inputBody {
   font-weight: 200;
   flex: 6;
 }
 
-.myFooter{
+.myFooter {
   flex: 1;
   font-weight: 200;
 }
 
-/* .container.item1{
-  background-color:blue;
-  width: 50%;
-  left:0;
-  margin-top: 30%;
+@media screen and (max-width: 768px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
-
-.container.item2{
-  background-color:red;
-  width: 50%;
-  right:0; 
-} */

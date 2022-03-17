@@ -5,13 +5,15 @@ const TableWeather = (props) => {
   const data = props.data;
   return (
     <table className={classes.myTable}>
+      <tbody>
       <tr>
         {data.map((x, index) => (
-          <th>
+          <th key={index}>
             <InfoWeatherItem title={x.title} content={x.content} />
           </th>
         ))}
       </tr>
+      </tbody>
     </table>
   );
 };

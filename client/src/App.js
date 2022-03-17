@@ -5,6 +5,7 @@ import classes from "./App.module.css";
 import WeatherSummery from "./components/WeatherSummery";
 import MoreInfo from "./components/MoreInfo";
 import Wrapper from "./components/UI/Wrapper";
+import axios from "axios";
 
 function App() {
   const apiKey = "dd708b0f3c764d5298893524221403";
@@ -12,21 +13,13 @@ function App() {
   const [city, setCity] = useState("");
   const [cityNameValid, setCityNameValid] = useState(false);
   const getWeather = async () => {
-    // https://localhost:8080/api/getWeather
+    // https://localhost:8000/api/getWeather
     try {
-      const response = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
-      );
-      if (!response.ok) {
-        setCityNameValid(true);
-        console.log("Error");
-        throw new Error("something went wrong!");
-      }
+      const res = await axios.get("http://localhost:8000/api", {
+        params: { value: city },
+      });
 
-      const data = await response.json();
-      // console.log(data);
-      setWeatherData(data);
-      console.log(weatherData);
+      setWeatherData(res.data);
       setCityNameValid(false);
     } catch {}
   };
@@ -38,11 +31,12 @@ function App() {
     <div>
       <div className={classes.container}>
         <div className={classes.details}>
-        <Wrapper title="start"/>
+          <Wrapper title="start" />
+          <br />
           <Wrapper title="header">
             <WeatherSummery />
           </Wrapper>
-          <br/>
+          <br />
           <Wrapper title="inputBody">
             <Form city={city} setCity={setCity} getWeather={getWeather} />
           </Wrapper>
