@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "./Input";
 import classes from "./Form.module.css";
 import MyInput from "./MyInput";
 const Form = (props) => {

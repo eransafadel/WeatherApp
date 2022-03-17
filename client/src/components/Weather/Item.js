@@ -16,6 +16,7 @@ const Item = (props) => {
   return (
     <div className={classes.outerContainer}>
     <div className={classes.container}>
+      
       <CurrWeather data={data} currDate={currDate} currHour={String(currHour).concat(":00")} />
       <InfoWeather data={data} currHour={currHour}/>
 

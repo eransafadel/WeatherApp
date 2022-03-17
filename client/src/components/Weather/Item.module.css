@@ -1,16 +1,19 @@
 .container {
-
   left:0;
   border-radius: 20px;
   background: linear-gradient(45deg,#034852,#0e7290);
   color:white;
   margin:10%;
   height: 80%;
+  
   }
 
   .outerContainer{
+    display: flex;
+    flex-basis: auto;
     background-color:#dde6f0;
     width: 40%;
     margin-top:1%;
     margin-bottom:1%;
   }
+

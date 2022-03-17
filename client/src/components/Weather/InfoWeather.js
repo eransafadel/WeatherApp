@@ -1,15 +1,12 @@
 import React from "react";
-import InfoWeatherItem from "./InfoWeatherItem";
 import classes from "./InfoWeather.module.css";
-import Wrapper from "../UI/Wrapper";
 import TableWeather from "./TableWeather";
 
 const InfoWeather = (props) => {
-  const dataLoaction = props.data.location;
   const currHour = props.currHour;
   const dataCurrent = props.data.current;
   const dataForecast = props.data.forecast.forecastday[0].hour;
-    
+
   const hoursTemperatureArr = Array.from({ length: 5 }, (_, index) => {
     const hour = currHour - (3 - index);
     return {
@@ -19,8 +16,6 @@ const InfoWeather = (props) => {
       ),
     };
   });
-
- 
 
   const arr = [
     {
@@ -39,8 +34,8 @@ const InfoWeather = (props) => {
 
   return (
     <div className={classes.infoWeather}>
-      <TableWeather data={arr}/> 
-       <TableWeather data={hoursTemperatureArr}/>
+      <TableWeather data={arr} />
+      <TableWeather data={hoursTemperatureArr} />
     </div>
   );
 };
