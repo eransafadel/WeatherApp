@@ -8,8 +8,6 @@ const app = express();
 const axios = require("axios");
 app.use(cors());
 
-console.log(process.env);
-
 app.get("/api", async (req, res) => {
 
   const apiKey = process.env.API_KEY;
@@ -17,11 +15,11 @@ app.get("/api", async (req, res) => {
   const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`;
  
   try {
-    const { data: response } = await axios.get(url);
-    res.send(response);
+    const response  = await axios.get(url);
+    res.send(response.data);
   } catch (error) {
-    console.log("Error!")
-    res.status(404).json('404 - no user exists in db to update');
+    console.log("error BackEnd!")
+    res.status(404).json('404!');
   }
 });
 
